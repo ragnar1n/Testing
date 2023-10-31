@@ -1,0 +1,10 @@
+Eesmärk:
+Testida Google otsingut ning öörežiimi läbi kahe cypress testi.
+
+Läbiviimine:
+Selgitatud täpsemalt igas testis eraldi.
+
+Kokkuvõte:
+Lõplikud testid loomulikult probleeme ei leidnud, kuid testide kirjutamisel kulus tükk aega elementide leidmisele läbi õigete klasside/IDde.
+Samuti takistas Google lõpptulemuste nägemist, kuna arvas pidevalt, et tegemist on robotiga.
+Kui aga reCAPTCHA ära lahendada, on näha, et mõlemad testid jõuavad soovitud lõpptulemuseni.
