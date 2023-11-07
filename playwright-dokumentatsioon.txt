@@ -1,0 +1,36 @@
+Aruanne
+
+Kirjeldus
+Valisin hetkel koolis tegemisel oleva projekti 'Sammalhabe Forum.' Antud projekt peaks välja kujunema foorumiks, mille kasutamiseks tuleb registreerida kasutaja, millega on hiljem võimalik foorumi sisse logida.
+Rakendusel on hetkel 3 vahelehte: 'Register,' 'Login' ja 'Home.' Registreerimisvorm küsib emaili, kasutajanime ning parooli. Sisselogimine küsib ainult kasutajanime ja parooli. Kodulehel on placeholder postitused.
+Testin navigeerimist ning sisselogimist. Jätan registreerimise testimata, et vältida andmebaasi risustamist.
+
+
+Testjuhu nimi: Navigeerimine vahelehelt 'Register' lehele 'Login'
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000/register'
+2. Otsitakse üles registreerimisvormi kohal olev link 'Click here to log in' ning klikitakse lingil
+3. Kontrollitakse, kas suunatud lehe aadress on 'http://localhost:3000/login'
+Oodatavad tulemused: Test navigeerib edukalt vahelehele 'Login'
+
+Testjuhu nimi: Sisselogimine läbi 'Login' lehe vormi kasutades andmebaasis eksisteeriva testkasutaja 'd' andmeid.
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000/login'
+2. Otsitakse üles väli nimega 'Username' ning sisestatakse sinna testkasutaja nimi 'd'
+3. Otsitakse üles väli nimega 'Password' ning sisestatakse sinna testkasutaja parool 'd'
+4. Otsitakse üles nupu element ning klikitakse sellel
+5. Kontrollitakse, kas suunatud lehe aadress on 'http://localhost:3000/home'
+Oodatavad tulemused: Test logib edukalt sisse ning suunatakse vahelehele 'Home'
+
+Testjuhu nimi: Navigeerimine mis tahes vahelehelt, näiteks 'Register', lehele 'Home'
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000/register'
+2. Otsitakse üles veebisaidi päises olev logo (link) 'Sammalhabe Forum' ning klikitakse sellel
+3. Kontrollitakse, kas suunatud lehe aadress on 'http://localhost:3000/login'
+Oodatavad tulemused: Test navigeerib edukalt vahelehele 'Home'
+
+
+Tulemused ja Probleemid
+
+Testid olid edukad, aga sisselogimine ei toimi korralikult, st kui kasutajanimi eksisteerib andmebaasis, siis on võimalik edukalt sisse logida mis tahes parooliga. Andmebaasis mitte-eksisteeriva kasutajanime puhul praeguses seisus rakendus lihtsalt jookseb kokku.
+Samas väidetavalt teistel rakendusega seotud grupikaaslastel kõik toimib, seega antud viga võib olla puhtalt minupoolne.
