@@ -1,0 +1,37 @@
+Aruanne
+
+Kirjeldus
+Valisin koolis tehtud projekti 'User Manager.' Antud projekti näol on tegemist ühelehelise rakendusega, mis koosneb vormist ning kasutajate nimekirjast vormi all.
+Vormis küsitakse kasutajanime ja vanust ning seejärel kuvatakse nimekirjas läbi vormi lisatud kasutajaid (kasutajanime ja vanust).
+Testin kasutajate lisamist ning veahaldust.
+
+
+Testjuhu nimi: Kasutajate lisamine (AddUser).
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000'
+2. Sisestatakse vormi väljadele username ja age vastavalt 'John Doe' ja '30' ning vajutatakse nupule submit
+3. Kontrollitakse, kas nimekirja on lisatud kasutaja nimega 'John Doe'
+Oodatavad tulemused: Test lisab edukalt nimekirja kasutaja 'John Doe' ning veendub, et antud kasutaja eksisteerib nimekirjas.
+
+Testjuhu nimi: Tühja vormi saatmine (EmptyFields).
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000'
+2. Vajutatakse ilma vormi täitmata nupule submit
+3. Kontrollitakse, kas leht on kuvanud veateate klassiga '.Error_modal__U-cY4'
+4. Kontrollitakse, kas veateate sisuks on 'Please enter a valid name or age (No empty values)'
+Oodatavad tulemused: Test proovib saata tühja vormi ning saab õige veateate.
+
+Testjuhu nimi: Negatiivse vanuse sisestamine vormi (NegativeAge).
+Testi sammud:
+1. Avatakse rakendus aadressil 'http://localhost:3000'
+2. Sisestatakse vormi väljadele username ja age vastavalt 'John Doe' ja '-5' ning vajutatakse nupule submit
+3. Kontrollitakse, kas leht on kuvanud veateate klassiga '.Error_modal__U-cY4'
+4. Kontrollitakse, kas veateate sisuks on 'Please enter a valid age (higher than 0)'
+Oodatavad tulemused: Test proovib sisestada vormi negatiivse vanusega kasutaja ning saab õige veateate.
+
+
+
+Tulemused ja Probleemid
+
+Testid olid edukad, aga sisselogimine ei toimi korralikult, st kui kasutajanimi eksisteerib andmebaasis, siis on võimalik edukalt sisse logida mis tahes parooliga. Andmebaasis mitte-eksisteeriva kasutajanime puhul praeguses seisus rakendus lihtsalt jookseb kokku.
+Samas väidetavalt teistel rakendusega seotud grupikaaslastel kõik toimib, seega antud viga võib olla puhtalt minupoolne.
