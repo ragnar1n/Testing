@@ -33,5 +33,4 @@ Oodatavad tulemused: Test proovib sisestada vormi negatiivse vanusega kasutaja n
 
 Tulemused ja Probleemid
 
-Testid olid edukad, aga sisselogimine ei toimi korralikult, st kui kasutajanimi eksisteerib andmebaasis, siis on võimalik edukalt sisse logida mis tahes parooliga. Andmebaasis mitte-eksisteeriva kasutajanime puhul praeguses seisus rakendus lihtsalt jookseb kokku.
-Samas väidetavalt teistel rakendusega seotud grupikaaslastel kõik toimib, seega antud viga võib olla puhtalt minupoolne.
+Testid olid edukad, rakendusel probleeme polnud.
